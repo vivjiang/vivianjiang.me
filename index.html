@@ -1,10 +1,90 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>vivianjiang.me</title>
-    </head>
+<html>
+  <head>
 
-    <body>
-      A webpage
-    </body>
-  </html>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+  </head>
+  <body background>
+    <div class="top-header">
+
+      <img src="name.png" style="width: 800;height: auto">
+      <div class ="profile-pic">
+        <img class= "img" src="photo.png">
+        <div class="overlay">
+        <div class= "about__me"> Hi, I'm Vivian! I'm an '18 from Wisconsin though I've also lived in Georgia,
+          North Carolina, and Alabama. I'm majoring in econ and minoring in CS, and I'll be in SF after graduation. </div>
+        </div>
+      </div>
+
+
+      <div id="difficulty-picker">
+          <button class="easyBtn wiggle" onclick="showHobbies()" id="hobbies"> Hobbies </button>
+
+          <button class="mediumBtn wiggle" onclick="showGoals()" id="goals"> Goals </button>
+
+          <button class="hardBtn wiggle" onclick="showQuirks()" id="quirks"> Why Dali </button>
+      </div>
+
+      <div id="hobbies-shown">
+        I like hanging out with friends, playing various musical instruments, cooking for large groups of people, and sleeping.
+      </div>
+
+      <div id="goals-shown">
+        Visit every continent, see the Northern Lights, retire and start something food-related.
+      </div>
+
+      <div id="quirks-shown">
+        I'd really like the chance to get to know more people, work with my friends, and have a meaningful impact on real-world projects.
+      </div>
+
+      <button onclick = "location.reload()" id="resetBtn"> Go Back </button>
+
+    </div>
+
+
+  <script>
+    //setupTask("memgame");
+    function showHobbies() {
+      var x = document.getElementById("hobbies-shown");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        var y = document.getElementById("difficulty-picker");
+        y.style.display = "none";
+        const reset = document.getElementById('resetBtn');
+        reset.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function showGoals() {
+      var x = document.getElementById("goals-shown");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        var y = document.getElementById("difficulty-picker");
+        y.style.display = "none";
+        const reset = document.getElementById('resetBtn');
+        reset.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function showQuirks() {
+      var x = document.getElementById("quirks-shown");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        var y = document.getElementById("difficulty-picker");
+        y.style.display = "none";
+        const reset = document.getElementById('resetBtn');
+        reset.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+  </script>
+  </body>
+</html>
